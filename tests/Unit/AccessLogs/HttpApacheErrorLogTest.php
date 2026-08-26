@@ -57,8 +57,8 @@ it('strips empty chars at the end', function ($chars) {
 
     expect($accessLog->getOriginalText())->toBe($line);
 })->with([
-    ['chars' => "\n"],
-    ['chars' => "\r\n"],
-    ['chars' => "\r"],
-    ['chars' => '    '],
+    'newline' => "\n",
+    'carriage return and newline' => "\r\n",
+    'carriage return' => "\r",
+    'spaces' => '    ',
 ]);
